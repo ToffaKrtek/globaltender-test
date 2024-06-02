@@ -1,0 +1,8 @@
+172.18.0.1 - - [02/Jun/2024:08:52:48 +0000] "GET / HTTP/1.1" 404 27 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"
+172.18.0.1 - - [02/Jun/2024:08:52:48 +0000] "GET /favicon.ico HTTP/1.1" 200 0 "http://localhost:8008/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"
+172.18.0.1 - - [02/Jun/2024:08:55:39 +0000] "GET / HTTP/1.1" 500 253 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"
+172.18.0.1 - - [02/Jun/2024:08:56:39 +0000] "GET / HTTP/1.1" 500 253 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"
+172.18.0.1 - - [02/Jun/2024:08:58:39 +0000] "GET / HTTP/1.1" 500 300643 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"
+172.18.0.1 - - [02/Jun/2024:09:00:19 +0000] "GET / HTTP/1.1" 500 315233 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"
+172.18.0.1 - - [02/Jun/2024:09:00:24 +0000] "GET / HTTP/1.1" 500 315233 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"
+172.18.0.1 - - [02/Jun/2024:09:00:34 +0000] "GET / HTTP/1.1" 200 34063 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"
