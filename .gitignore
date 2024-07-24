@@ -13,3 +13,6 @@ db-data/private_key.pem
 db-data/public_key.pem
 db-data/server-cert.pem
 db-data/server-key.pem
+db-data/*
+!db-data/.gitignore
+

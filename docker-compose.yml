@@ -16,13 +16,13 @@ services:
 
   php_fpm:
     container_name: php_fpm
-    # Вам конечно очень нравится совать Dockerfile в проект, но... в момент билда докер-демон берет все что имеется в директории контекста.
-    # А значит держите Dockerfile там где лежит как можно меньше файлов, сборка будет быстрее
     build:
       context: ./php
     volumes:
-      - ./src/:/var/www
-    links:
+      - ./src/laravel:/var/www/laravel
+    ports:
+      - 8080:8080
+    depends_on:
         - mysql
 
   php_queue:
@@ -30,16 +30,18 @@ services:
     image: php:8.2-fpm
     volumes:
       - ./src/:/var/www
-    command: "cd /var/www/laravel && php artisan queue:work"
+    working_dir: /var/www/laravel
+    command: sh -c "php artisan queue:work"
 
   php_websocket:
     container_name: php_websocket
     image: php:8.2-fpm
     volumes:
       - ./src/:/var/www
-    command: "cd /var/www/laravel && php artisan websocket:serve"
+    working_dir: /var/www/laravel
+    command: sh -c "php artisan reverb:custom-start"
     ports:
-      - 6000:6000
+      - 6001:6001
 
   mysql:
     container_name: mysql
