@@ -36,10 +36,11 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 
 RUN npm install -g @vue/cli
-RUN docker-php-ext-install pcntl
-
 EXPOSE 9000
-COPY ./init.sh /usr/bin/entrypoint.sh
-COPY php.ini /usr/local/etc/php/php.ini
-ENTRYPOINT ["entrypoint.sh"]
-#CMD ["php-fpm"]
+COPY ./init.sh /entrypoint.sh
+
+RUN docker-php-ext-configure pcntl --enable-pcntl && \
+    docker-php-ext-install pcntl
+
+#ENTRYPOINT ["/entrypoint.sh"]
+CMD ["php-fpm"]

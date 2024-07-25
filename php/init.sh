@@ -3,4 +3,4 @@
 cd laravel
 composer install
 php artisan migrate
-php-fpm -F
+php-fpm
